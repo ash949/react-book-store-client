@@ -11,7 +11,7 @@ console.error = msg => {
 
 ReactDOM.render(
   <Provider store={store}>
-    <App id={1} />
+    <App />
   </Provider>,
   document.getElementById("root")
 );
