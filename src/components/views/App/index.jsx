@@ -1,14 +1,23 @@
-import React, { Component } from "react";
-import "./App.scss";
+//@flow
+import * as React from "react";
+import { connect } from "react-redux";
+import Menu from "./../Menu";
+import type { Props } from "./../Menu";
+import "./app.scss";
+import type { State } from "../../../store";
 
-import { INITIAL_STATE, isState } from "../../../store";
+const mapStateToProps = (state: State): Props => {
+  let { mobileMenu, user } = state;
+  return { mobileMenu, user };
+};
 
-class App extends Component {
-  render() {
-    isState(INITIAL_STATE);
+let App = (props: Props) => {
+  return <Menu {...props} />;
+};
 
-    return <div>Reux React App</div>;
-  }
-}
+App = connect(
+  mapStateToProps,
+  null
+)(App);
 
 export default App;

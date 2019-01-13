@@ -1,13 +1,9 @@
-import React from "react";
+import * as React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import App from "./components/views/App";
 import * as serviceWorker from "./serviceWorker";
-
-console.error = msg => {
-  throw new Error(msg);
-};
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,17 +1,18 @@
-import actionTypes from "./../actions/actionTypes";
+// import actionTypes from "./../actions/actionTypes";
 
 const rootReducer = (state, action) => {
-  let newState;
+  // let newState;
 
-  for (let i = 0; i < actionTypes.length; i++) {
-    const actionType = actionTypes[i];
-    if (actionType === action.type) {
-      // reduce
-      break;
-    }
-  }
+  // for (let i = 0; i < actionTypes.length; i++) {
+  //   const actionType = actionTypes[i];
+  //   if (actionType === action.type) {
+  //     // reduce
+  //     break;
+  //   }
+  // }
 
-  return newState;
+  // return newState;
+  return state;
 };
 
 export default rootReducer;
