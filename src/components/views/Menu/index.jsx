@@ -1,18 +1,15 @@
 //@flow
 import * as React from "react";
 import "./menu.scss";
+import type { User } from "./../../../types";
+// import ID from "./../../../classes/ID";
 
-export type Props = {|
+export type MenuProps = {|
   mobileMenu: boolean,
-  user: ?{
-    id: string,
-    username: string,
-    email: string
-  }
+  user: ?User
 |};
 
-const Menu = (props: Props) => {
-  console.log(props);
+const Menu = (props: MenuProps) => {
   return (
     <nav>
       <ul>

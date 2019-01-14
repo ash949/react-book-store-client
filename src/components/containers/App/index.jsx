@@ -1,17 +1,16 @@
 //@flow
 import * as React from "react";
 import { connect } from "react-redux";
-import Menu from "./../Menu";
-import type { Props } from "./../Menu";
+import Menu from "./../../views/Menu";
+import type { MenuProps } from "./../../views/Menu";
 import "./app.scss";
-import type { State } from "../../../store";
-
-const mapStateToProps = (state: State): Props => {
+import type { State } from "./../../../types";
+const mapStateToProps = (state: State): MenuProps => {
   let { mobileMenu, user } = state;
   return { mobileMenu, user };
 };
 
-let App = (props: Props) => {
+let App = (props: MenuProps) => {
   return <Menu {...props} />;
 };
 
