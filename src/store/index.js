@@ -1,9 +1,8 @@
 //@flow
 import { createStore } from "redux";
 import rootReducer from "../reducers/root";
-import type { State } from "../types";
 
-const INITIAL_STATE: State = {
+const INITIAL_STATE = {
   user: null,
   loginForm: null,
   bookList: [],
@@ -18,7 +17,8 @@ const INITIAL_STATE: State = {
   createUserForm: null,
   updateUserForm: null,
   mobileMenu: false,
-  authorized: true
+  authorized: true,
+  errors: []
 };
 
 const store = createStore(rootReducer, INITIAL_STATE);

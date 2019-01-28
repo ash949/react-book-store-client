@@ -1,15 +1,9 @@
 //@flow
 import * as React from "react";
 import "./menu.scss";
-import type { User } from "./../../../types";
 // import ID from "./../../../classes/ID";
 
-export type MenuProps = {|
-  mobileMenu: boolean,
-  user: ?User
-|};
-
-const Menu = (props: MenuProps) => {
+const Menu = props => {
   return (
     <nav>
       <ul>
@@ -24,6 +18,10 @@ const Menu = (props: MenuProps) => {
               <li key="signup-link">Signup</li>
             ]}
       </ul>
+      <p>{props.user ? props.user.username : "Please Login"}</p>
+
+      <button onClick={props.onClickTest1}>test 1</button>
+      <button onClick={props.onClickTest2}>test 2</button>
     </nav>
   );
 };
