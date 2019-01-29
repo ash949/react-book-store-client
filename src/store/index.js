@@ -1,6 +1,7 @@
 //@flow
 import { createStore, applyMiddleware } from "redux";
 import thunkMiddleware from "redux-thunk";
+import logger from "../middlewares/logger";
 import rootReducer from "../reducers/root";
 
 const INITIAL_STATE = {
@@ -19,13 +20,14 @@ const INITIAL_STATE = {
   updateUserForm: null,
   mobileMenu: false,
   authorized: true,
-  errors: []
+  errors: [],
+  testLogMessage: []
 };
 
 const store = createStore(
   rootReducer,
   INITIAL_STATE,
-  applyMiddleware(thunkMiddleware)
+  applyMiddleware(thunkMiddleware, logger)
 );
 
 export { store as default, INITIAL_STATE };

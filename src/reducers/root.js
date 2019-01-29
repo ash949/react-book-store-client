@@ -7,6 +7,9 @@ const rootReducer = (state, action) => {
     case "LOGOUT":
       newState.user = null;
       break;
+    case "LOGGING":
+      newState.testLogMessage.push(action.payload);
+      break;
     default:
       newState.errors.push("Action not identfied");
   }

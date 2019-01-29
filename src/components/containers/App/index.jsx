@@ -6,8 +6,8 @@ import "./app.scss";
 import actionCreators from "../../../actions";
 
 const mapStateToProps = state => {
-  let { mobileMenu, user } = state;
-  return { mobileMenu, user };
+  let { mobileMenu, user, testLogMessage } = state;
+  return { mobileMenu, user, testLogMessage };
 };
 
 const mapDispatchToProps = dispatch => {

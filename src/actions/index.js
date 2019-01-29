@@ -4,7 +4,6 @@ export const LOGOUT = "LOGOUT";
 const actionCreators = {
   login: () => {
     return dispatch => {
-      alert("side effect");
       fetch("https://jsonplaceholder.typicode.com/users/1")
         .then(res => {
           return res.json();

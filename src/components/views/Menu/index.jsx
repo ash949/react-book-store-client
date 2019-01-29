@@ -19,6 +19,7 @@ const Menu = props => {
             ]}
       </ul>
       <p>{props.user ? `Welcome ${props.user.username}` : "Please Login"}</p>
+      <p>{props.testLogMessage}</p>
 
       <button onClick={props.onClickTest1}>Login</button>
       <button onClick={props.onClickTest2}>Logout</button>
