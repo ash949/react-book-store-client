@@ -1,5 +1,6 @@
 //@flow
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunkMiddleware from "redux-thunk";
 import rootReducer from "../reducers/root";
 
 const INITIAL_STATE = {
@@ -21,6 +22,10 @@ const INITIAL_STATE = {
   errors: []
 };
 
-const store = createStore(rootReducer, INITIAL_STATE);
+const store = createStore(
+  rootReducer,
+  INITIAL_STATE,
+  applyMiddleware(thunkMiddleware)
+);
 
 export { store as default, INITIAL_STATE };

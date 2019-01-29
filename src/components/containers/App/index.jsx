@@ -13,8 +13,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onClickTest1: () => {
-      // dispatch(actionCreators.login());
-      actionCreators.login(dispatch)();
+      dispatch(actionCreators.login());
+      // actionCreators.login(dispatch)();
     },
     onClickTest2: () => {
       dispatch(actionCreators.logout());
