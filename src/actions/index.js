@@ -1,17 +1,33 @@
-// import actionTypes from "./actionTypes";
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
 
 const actionCreators = {
-  test1: () => {
-    return {
-      type: "TEST_1",
-      payload: "test 1 data"
+  login: dispatch => {
+    return () => {
+      alert("side effect");
+      fetch("https://jsonplaceholder.typicode.com/users/1")
+        .then(res => {
+          return res.json();
+        })
+        .then(jsonRes => {
+          dispatch({
+            type: LOGIN,
+            payload: jsonRes.name
+          });
+        });
     };
   },
 
-  test2: () => {
+  // login: () => {
+  //   return {
+  //     type: LOGIN,
+  //     payload: "Hamza Ashour"
+  //   };
+  // },
+
+  logout: () => {
     return {
-      type: "TEST_2",
-      payload: "test 2 data"
+      type: LOGOUT
     };
   }
 };

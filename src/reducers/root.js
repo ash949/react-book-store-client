@@ -1,13 +1,11 @@
-// import actionTypes from "./../actions/actionTypes";
-
 const rootReducer = (state, action) => {
   let newState = { ...state };
   switch (action.type) {
-    case "TEST_1":
+    case "LOGIN":
       newState.user = { username: action.payload };
       break;
-    case "TEST_2":
-      newState.user = { username: action.payload };
+    case "LOGOUT":
+      newState.user = null;
       break;
     default:
       newState.errors.push("Action not identfied");

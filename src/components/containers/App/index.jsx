@@ -13,10 +13,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     onClickTest1: () => {
-      dispatch(actionCreators.test1());
+      // dispatch(actionCreators.login());
+      actionCreators.login(dispatch)();
     },
     onClickTest2: () => {
-      dispatch(actionCreators.test2());
+      dispatch(actionCreators.logout());
     }
   };
 };

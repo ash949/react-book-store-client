@@ -18,10 +18,10 @@ const Menu = props => {
               <li key="signup-link">Signup</li>
             ]}
       </ul>
-      <p>{props.user ? props.user.username : "Please Login"}</p>
+      <p>{props.user ? `Welcome ${props.user.username}` : "Please Login"}</p>
 
-      <button onClick={props.onClickTest1}>test 1</button>
-      <button onClick={props.onClickTest2}>test 2</button>
+      <button onClick={props.onClickTest1}>Login</button>
+      <button onClick={props.onClickTest2}>Logout</button>
     </nav>
   );
 };
